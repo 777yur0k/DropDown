@@ -64,7 +64,7 @@ public class DropDownScript : MonoBehaviour
 
     [SerializeField] void Interact()
     {
-        MyObject.ChangeActive(Template);
+        Template.SetActive(!Template.activeSelf);
         GetComponent<Button>().interactable = !GetComponent<Button>().interactable;
     }
 }
