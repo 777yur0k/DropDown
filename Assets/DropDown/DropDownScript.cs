@@ -49,6 +49,7 @@ public class DropDownScript : MonoBehaviour
         var rectPrefab = PrefabItem.GetComponent<RectTransform>().rect;
         if (type == DropType.GenerateTemplateFromMaxItems) Objetc.sizeDelta = new(Objetc.sizeDelta.x, (rectPrefab.height * MaxItems) + Parent.GetComponent<VerticalLayoutGroup>().spacing * (MaxItems - 1));
         else Objetc.sizeDelta = new(Objetc.sizeDelta.x, (rectPrefab.height * CountIntems) + Parent.GetComponent<VerticalLayoutGroup>().spacing * (CountIntems - 1));
+        Template.transform.localPosition = new(Template.transform.localPosition.x, -GetComponent<RectTransform>().rect.height / 2);
     }
 
     void Select(int id)
